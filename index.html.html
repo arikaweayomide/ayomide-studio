@@ -3,20 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Ayomide Studio | Professional Graphic Design & Branding</title>
-    <meta name="description" content="Ayomide Studio provides expert Graphic Design, Logo Branding, Web Design, and Illustration services. Contact us at 8074931115 for your next project.">
-    <meta name="keywords" content="Ayomide Studio, Graphic Designer, Logo Design, Web Development, Illustration, Branding Nigeria">
-    <meta name="author" content="Ayomide">
-
-    <meta property="og:title" content="Ayomide Studio | Creative Design">
-    <meta property="og:description" content="Check out my portfolio for branding, web, and illustration projects.">
-    <meta property="og:type" content="website">
-
+    <title>Ayomide Studio | Graphic Design & Branding</title>
     <style>
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: sans-serif;
             background: #000;
             color: white;
             display: flex;
@@ -24,118 +15,74 @@
             align-items: center;
             min-height: 100vh;
         }
-
-        header {
-            text-align: center;
-            padding: 80px 20px;
-        }
-
-        /* Rainbow Glow Title */
+        header { text-align: center; padding: 60px 20px; }
         h1 {
-            font-size: 4rem;
-            text-transform: uppercase;
-            letter-spacing: 10px;
-            margin: 0;
-            font-weight: 900;
+            font-size: 3.5rem;
+            letter-spacing: 5px;
             background: linear-gradient(to right, #ff0000, #00ffd5, #ff00c8, #fffb00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(0, 255, 213, 0.4));
+            margin: 0;
         }
-
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
             width: 90%;
-            max-width: 1100px;
-            margin-top: 50px;
+            max-width: 1000px;
         }
-
-        .design-card {
+        .card {
             background: rgba(255, 255, 255, 0.05);
-            border: 2px solid #333;
-            border-radius: 20px;
-            padding: 60px 20px;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 50px 20px;
             text-decoration: none;
             color: white;
             text-align: center;
-            transition: 0.4s ease;
-            position: relative;
-            overflow: hidden;
+            font-weight: bold;
+            transition: 0.3s;
         }
-
-        .design-card:hover {
+        .card:hover {
             background: #fff;
             color: #000;
-            transform: translateY(-15px);
-            border-color: #fff;
-            box-shadow: 0 10px 30px rgba(0, 255, 213, 0.5);
+            transform: translateY(-10px);
         }
-
-        .design-card h2 {
-            margin: 0;
-            font-size: 1.8rem;
-            letter-spacing: 3px;
-        }
-
         footer {
             margin-top: auto;
-            padding: 60px 20px;
+            padding: 40px;
             text-align: center;
-            background: #080808;
             width: 100%;
-            border-top: 1px solid #222;
+            background: #0a0a0a;
         }
-
-        .footer-content p { margin: 10px 0; color: #888; font-size: 1.1rem; }
-        .footer-content a { color: #00ffd5; text-decoration: none; font-weight: bold; }
-        
-        .hire-btn {
+        .whatsapp-btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 40px;
+            padding: 15px 30px;
             background: #00ffd5;
             color: black;
             text-decoration: none;
-            font-weight: bold;
             border-radius: 50px;
-            text-transform: uppercase;
-            transition: 0.3s;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
-        .hire-btn:hover { background: #fff; transform: scale(1.1); }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Ayomide Studio</h1>
-        <p style="color: #888; letter-spacing: 2px; margin-top: 10px;">GRAPHIC DESIGN • BRANDING • WEB</p>
+        <p style="color: #666; letter-spacing: 2px;">DESIGN • BRANDING • WEB</p>
     </header>
 
     <div class="container">
-        <a href="sophomore.html" class="design-card">
-            <h2>BRANDING</h2>
-        </a>
-
-        <a href="web.html" class="design-card">
-            <h2>WEB DESIGN</h2>
-        </a>
-
-        <a href="illustration.html" class="design-card">
-            <h2>ILLUSTRATION</h2>
-        </a>
+        <a href="sophomore.html" class="card">BRANDING</a>
+        <a href="web.html" class="card">WEB DESIGN</a>
+        <a href="illustration.html" class="card">ILLUSTRATION</a>
     </div>
 
     <footer>
-        <div class="footer-content">
-            <p>Ready to start a project?</p>
-            <a href="https://wa.me/2348074931115" class="hire-btn">HIRE ME ON WHATSAPP</a>
-            <br><br>
-            <p>📞 <a href="tel:8074931115">807493 1115</a></p>
-            <p>📧 <a href="mailto:arikaweayomide428@gmail.com">arikaweayomide428@gmail.com</a></p>
-            <p style="font-size: 0.8rem; margin-top: 30px;">&copy; 2026 Ayomide Studio. All Rights Reserved.</p>
-        </div>
+        <a href="https://wa.me/2348074931115" class="whatsapp-btn">HIRE ME ON WHATSAPP</a>
+        <p>📞 807493 1115</p>
+        <p>📧 arikaweayomide428@gmail.com</p>
     </footer>
 
 </body>
