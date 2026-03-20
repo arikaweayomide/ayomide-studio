@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding - Ayomide Studio</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #000; color: white; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+        .header-area { display: flex; justify-content: space-between; align-items: center; width: 95%; max-width: 1200px; margin-bottom: 40px; }
+        .back-btn { background: #333; padding: 10px 20px; text-decoration: none; color: white; border-radius: 50px; border: 1px solid #00ffd5; }
+        .grid-12 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; width: 95%; max-width: 1200px; }
+        .liquid-box { background: #111; border-radius: 20px; padding: 4px; position: relative; cursor: pointer; height: 280px; overflow: hidden; }
+        .liquid-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, #ff0000, #00ffd5, #ff00c8, #fffb00); background-size: 400%; animation: move 4s linear infinite; z-index: 1; }
+        .inner-content { background: #000; border-radius: 17px; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; z-index: 2; overflow: hidden; }
+        .inner-content img { width: 100%; height: 100%; object-fit: contain; }
+        @keyframes move { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+        #lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; justify-content: center; align-items: center; z-index: 1000; cursor: pointer; }
+        #lightbox img { max-width: 90%; max-height: 90%; border: 2px solid #00ffd5; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <div class="header-area"><h1>Branding</h1><a href="index.html" class="back-btn">← BACK</a></div>
+    <div class="grid-12">
+        <div class="liquid-box" onclick="showImg('p1.jpg')"><div class="inner-content"><img src="p1.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p2.jpg')"><div class="inner-content"><img src="p2.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p3.jpg')"><div class="inner-content"><img src="p3.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p4.jpg')"><div class="inner-content"><img src="p4.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p5.jpg')"><div class="inner-content"><img src="p5.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p6.jpg')"><div class="inner-content"><img src="p6.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p7.jpg')"><div class="inner-content"><img src="p7.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p8.jpg')"><div class="inner-content"><img src="p8.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p9.jpg')"><div class="inner-content"><img src="p9.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p10.jpg')"><div class="inner-content"><img src="p10.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p11.jpg')"><div class="inner-content"><img src="p11.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('p12.jpg')"><div class="inner-content"><img src="p12.jpg"></div></div>
+    </div>
+    <div id="lightbox" onclick="this.style.display='none'"><img id="popImg" src=""></div>
+    <script>function showImg(p){document.getElementById('popImg').src=p;document.getElementById('lightbox').style.display='flex';}</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design - Ayomide Studio</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #000; color: white; display: flex; flex-direction: column; align-items: center; padding: 40px 20px; }
+        .header-area { display: flex; justify-content: space-between; align-items: center; width: 95%; max-width: 1200px; margin-bottom: 40px; }
+        h1 { font-size: 2rem; text-transform: uppercase; letter-spacing: 5px; color: #00ffd5; }
+        .back-btn { background: #222; padding: 10px 25px; text-decoration: none; color: white; font-weight: bold; border-radius: 50px; border: 1px solid #00ffd5; transition: 0.3s; }
+        .back-btn:hover { background: #00ffd5; color: black; }
+        .grid-12 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; width: 95%; max-width: 1200px; }
+        .liquid-box { background: #111; border-radius: 20px; padding: 4px; position: relative; cursor: pointer; height: 280px; overflow: hidden; transition: 0.4s; }
+        .liquid-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, #00ffd5, #002bff, #7a00ff, #00ffd5); background-size: 400%; animation: move 4s linear infinite; z-index: 1; -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+        .inner-content { background: #000; border-radius: 17px; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; z-index: 2; overflow: hidden; }
+        .inner-content img { width: 100%; height: 100%; object-fit: contain; transition: 0.5s; }
+        .liquid-box:hover { transform: translateY(-10px); }
+        @keyframes move { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+        #lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 1000; cursor: zoom-out; }
+        #lightbox img { max-width: 90%; max-height: 90%; border: 2px solid #00ffd5; border-radius: 10px; box-shadow: 0 0 30px #00ffd5; }
+    </style>
+</head>
+<body>
+    <div class="header-area"><h1>Web Design</h1><a href="index.html" class="back-btn">← BACK</a></div>
+    <div class="grid-12">
+        <div class="liquid-box" onclick="showImg('w1.jpg')"><div class="inner-content"><img src="w1.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w2.jpg')"><div class="inner-content"><img src="w2.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w3.jpg')"><div class="inner-content"><img src="w3.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w4.jpg')"><div class="inner-content"><img src="w4.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w5.jpg')"><div class="inner-content"><img src="w5.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w6.jpg')"><div class="inner-content"><img src="w6.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w7.jpg')"><div class="inner-content"><img src="w7.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w8.jpg')"><div class="inner-content"><img src="w8.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w9.jpg')"><div class="inner-content"><img src="w9.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w10.jpg')"><div class="inner-content"><img src="w10.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w11.jpg')"><div class="inner-content"><img src="w11.jpg"></div></div>
+        <div class="liquid-box" onclick="showImg('w12.jpg')"><div class="inner-content"><img src="w12.jpg"></div></div>
+    </div>
+    <div id="lightbox" onclick="this.style.display='none'"><img id="popImg" src=""></div>
+    <script>function showImg(p){document.getElementById('popImg').src=p;document.getElementById('lightbox').style.display='flex';}</script>
+</body>
+</html>
